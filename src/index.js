@@ -1,5 +1,4 @@
 /* eslint-disable no-eval */
-const os = require('os')
 const { getOptions } = require('loader-utils')
 
 function getPredicate (line) {
@@ -103,7 +102,7 @@ function commentLine (line) {
 
 module.exports = function (source) {
   try {
-    const sourceByLine = source.split(os.EOL)
+    const sourceByLine = source.split(/[\r\n]+/g)
     const blocks = searchBlocks(sourceByLine)
     const truthyBlocks = getTruthyBlocks(blocks, getOptions(this))
     const transformedSource = commentCodeInsideBlocks(sourceByLine, truthyBlocks)
