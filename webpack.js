@@ -7,8 +7,10 @@ module.exports = {
     'env-var-falsey': './test/test-files/env-var-falsey.js',
     'local-var-truthy': './test/test-files/local-var-truthy.js',
     'local-var-falsey': './test/test-files/local-var-falsey.js',
-    'falsey': './test/test-files/falsey.js',
-    'truthy': './test/test-files/truthy.js'
+    'posix-falsey': './test/test-files/posix-falsey.js',
+    'posix-truthy': './test/test-files/posix-truthy.js',
+    'windows-falsey': './test/test-files/windows-falsey.js',
+    'windows-truthy': './test/test-files/windows-truthy.js',
   },
   output: {
     path: path.resolve(__dirname, 'build'),
